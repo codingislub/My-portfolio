@@ -168,6 +168,7 @@ a:hover {
 #hamburger-nav {
   display: none;
   border: none;
+  border-bottom: none;
 }
 
 .hamburger-menu {
@@ -197,7 +198,7 @@ a:hover {
   right: 0;
   background: rgba(17, 17, 17, 0.95);
   backdrop-filter: blur(20px);
-  border: 1px solid var(--border-color);
+  border: 0px solid var(--border-color);
   border-radius: 1rem;
   width: fit-content;
   max-height: 0;
@@ -226,6 +227,7 @@ a:hover {
 
 .menu-links.open {
   max-height: 300px;
+  border: 1px solid var(--border-color);
 }
 
 .hamburger-icon.open span:first-child {
@@ -766,15 +768,16 @@ section:not(#profile) {
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(20px);
     z-index: 1000;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     justify-content: space-between;
     align-items: center;
-    border-bottom: black;
+    border-bottom: none;
+    height: 60px;
   }
   
   section {
     margin: 0 2rem;
-    padding-top: 10vh;
+    padding-top: 60px;
   }
   
   .title {
