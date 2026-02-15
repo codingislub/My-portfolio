@@ -1,795 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link
-      rel="icon"
-      href="./assets/portfolio-svgrepo-com.svg"
-      type="image/svg+xml"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryan Singh Bisht | Full-Stack Developer</title>
+  <link rel="icon" href="./assets/portfolio-svgrepo-com.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Background Elements -->
+  <div class="cosmos-bg"></div>
+  <div class="stars"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="logo">Aryan.</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Exp.</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <!-- Mobile MenuOverlay -->
+  <div class="mobile-menu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#experience" onclick="toggleMenu()">Experience</a>
+    <a href="#projects" onclick="toggleMenu()">Work</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <span class="pill-badge">Available for work</span>
+        <h1>Crafting <br> <span class="gradient-text">Exceptional</span> <br> Digital <br> Experiences.</h1>
+        <p>Full-Stack Developer | Cloud (AWS), DevOps & Blockchain Enthusiast</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn primary">View Work</a>
+          <a href="./assets/resume.pdf" target="_blank" class="btn secondary">Resume</a>
+        </div>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Aryan Singh Bisht</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/profile-pic.png"
-            alt="Aryan Singh Bisht Profile Picture"
-          />
-        </div>
-        <div class="section__text">
-          <p class="section__text__p1">Hello, I'm</p>
-          <h1 class="title">Aryan Singh Bisht</h1>
-          <p class="section__text__p2">
-            Full-Stack Developer | Cloud (AWS), DevOps & Blockchain Enthusiast
-          </p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2"
-              onclick="window.open('./assets/resume.pdf')"
-            >
-              Download CV
-            </button>
-            <button
-              class="btn btn-color-1"
-              onclick="location.href='./#contact'"
-            >
-              Contact Info
-            </button>
-          </div>
-          <div id="socials-container">
-            <svg
-              class="icon"
-              onclick="location.href='https://linkedin.com/'"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
-              />
-            </svg>
-            <svg
-              class="icon"
-              onclick="location.href='https://github.com/'"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-              />
-            </svg>
-          </div>
-        </div>
+      <div class="hero-visual">
+        <!-- 3D or Abstract Visual placeholder -->
+        <div class="orb"></div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>Full-Stack Web Development, Blockchain & DevOps</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>BTech Bachelor's Degreee</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I am a motivated and curious individual with a strong interest in
-              continuous learning and problem-solving. I enjoy taking on new
-              challenges that push me to grow, both personally and
-              professionally. With a balance of creativity and analytical
-              thinking, I strive to bring fresh perspectives to the work I do.
-              Beyond academics and career goals, I value teamwork,
-              communication, and building meaningful connections with people
-              around me.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Next.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tailwind CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GSAP & Framer Motion</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>EJS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
 
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Prisma ORM</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MongoDB</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>REST API</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Stripe & Razorpay</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Clerk Authentication</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
+    <!-- Bento Grid Section (About & Skills) -->
+    <section id="about" class="bento-section">
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
 
-          <div class="details-container">
-            <h2 class="experience-sub-title">Blockchain & DevOps</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Solana</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Rust</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Web3.js</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DApps</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Docker</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Kubernetes</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Prometheus & Grafana</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CI/CD (GitHub Actions)</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>
-                    AWS (EC2, S3, Lambda, CloudFront, CloudWatch, API Gateway)
-                  </h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Zod & ESLint Validation</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Azure AI (Fundamentals & Engineer Associate)</h3>
-                  <p>Certified</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Microservices & Event-Driven Architecture</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Object-Oriented Programming (OOP)</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>AI & ML</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
+      <div class="bento-grid">
+        <!-- Profile Card -->
+        <div class="bento-card profile-card span-2-col span-2-row">
+          <img src="./assets/profile-pic.png" alt="Aryan Singh Bisht" class="profile-img">
+          <div class="card-content">
+            <h3>Aryan Singh Bisht</h3>
+            <p>I create high-performance web applications and decentralized solutions. Passionate about solving complex
+              problems with clean code.</p>
+            <div class="socials">
+              <a href="https://linkedin.com/" target="_blank" class="social-icon">IN</a>
+              <a href="https://github.com/" target="_blank" class="social-icon">GH</a>
+              <a href="mailto:aryansingbisht19@gmail.com" class="social-icon">@</a>
             </div>
           </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
 
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- Zentry Clone -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/zentry.jpg"
-                alt="Zentry Clone"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Zentry Clone</h2>
-            <p>
-              Modern portfolio website using React.js & Tailwind CSS with smooth
-              animations (GSAP & Framer Motion) and optimized with Vite.
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codingislub/zentry_clone'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://zentr.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <!-- TechVerse Blog -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/blog.webp"
-                alt="TechVerse Blog Platform"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              TechVerse Blog Platform
-            </h2>
-            <p>
-              Full-stack blog platform built with Next.js 15, React 19, and
-              Tailwind CSS. Features dynamic article search, CRUD operations,
-              Clerk auth, and CI/CD via GitHub Actions.
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codingislub/blogapp'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://techverse-blog.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+        <!-- Education Card -->
+        <div class="bento-card education-card">
+          <div class="icon-box">🎓</div>
+          <h3>Education</h3>
+          <p>BTech Bachelor's Degree</p>
+        </div>
 
-          <!-- E-Commerce -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ecom.webp"
-                alt="E-commerce Website"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              E-commerce Website
-            </h2>
-            <p>
-              Cloud-native full-stack e-commerce platform using React, Node.js,
-              Express, and MongoDB. Includes product search, user auth, AWS S3
-              uploads, and Stripe payments.
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codingislub/Ecomaws'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://ecom-frontend.aryan.college'"
-              >
-                Live Demo
-              </button>
-            </div>
+        <!-- Tech Stack - Frontend -->
+        <div class="bento-card stack-card span-2-col">
+          <h3>Frontend Arsenal</h3>
+          <div class="tech-tags">
+            <span>React.js</span>
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Tailwind</span>
+            <span>GSAP</span>
+            <span>Framer Motion</span>
+            <span>EJS</span>
           </div>
+        </div>
 
-          <!-- Fun.Pump -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/pump.webp"
-                alt="Fun.Pump Token Launchpad"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Fun.Pump Token Launchpad
-            </h2>
-            <p>
-              Decentralized token launchpad built with Next.js and Solidity.
-              Enables permissionless token creation, wallet integration, and
-              real-time transaction monitoring.
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codingislub/fun.pump'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://fun-pump-phi.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
+        <!-- Tech Stack - Backend -->
+        <div class="bento-card stack-card">
+          <h3>Backend Core</h3>
+          <div class="tech-tags">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>Java</span>
+            <span>PostgreSQL</span>
+            <span>MongoDB</span>
+            <span>MySQL</span>
+            <span>Prisma</span>
+            <span>REST API</span>
+            <span>Stripe/Razorpay</span>
+            <span>Clerk Auth</span>
+            <span>Git</span>
           </div>
+        </div>
 
-          <!-- Solana Token Generator -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/token-generator.png"
-                alt="Solana Token Generator"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Solana Token Generator
-            </h2>
-            <p>
-              DApp to mint SPL tokens on Solana. Supports Phantom & Solflare
-              wallets, real-time transaction updates, and wallet balance checks.
-              Built with React.
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codingislub/solana-token-generator'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://solana-token-generator-rho.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <!-- Solana Token Launchpad -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/token-launchpad.png"
-                alt="Solana Token Launchpad"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Solana Token Launchpad
-            </h2>
-            <p>
-              DApp for minting SPL tokens with wallet integration, real-time
-              transaction feedback, and balance checks. Built with React for
-              smooth UX.
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codingislub/solana-token-launchpad'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://solana-token-launchpad-5w43.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
+        <!-- Tech Stack - DevOps/Web3 -->
+        <div class="bento-card stack-card span-2-col">
+          <h3>Cloud & Web3</h3>
+          <div class="tech-tags">
+            <span>AWS</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>CI/CD</span>
+            <span>Solana</span>
+            <span>Rust</span>
+            <span>Web3.js</span>
+            <span>DApps</span>
+            <span>Prometheus/Grafana</span>
+            <span>Zod/ESLint</span>
+            <span>Azure AI</span>
+            <span>Microservices</span>
+            <span>OOP</span>
+            <span>AI/ML</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>
-            <a href="mailto:examplemail@gmail.com"
-              >aryansingbisht19@gmail.com</a
-            >
-          </p>
+    <!-- Professional Experience Section -->
+    <section id="experience" class="work-section">
+      <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+
+      <div class="timeline">
+        <!-- Kapitalwise -->
+        <div class="timeline-item">
+          <div class="timeline-content bento-card">
+            <div class="exp-header">
+              <h3>SDE Intern</h3>
+              <span class="company">Kapitalwise Inc.</span>
+            </div>
+            <span class="date">Jan 2026 - Present</span>
+            <ul class="exp-list">
+              <li>Building full-stack features across frontend, backend, and AWS cloud infrastructure for fintech
+                applications.</li>
+              <li>Developing RESTful APIs, responsive UI components, and implementing Docker containerization.</li>
+              <li>Managing AWS ECS clusters and orchestrating cloud services (EC2, S3, RDS) for scalability.</li>
+            </ul>
+          </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/aryan-singh-bisht/"
-              >LinkedIn</a
-            >
-          </p>
+
+        <!-- Bridge Bound Academics -->
+        <div class="timeline-item">
+          <div class="timeline-content bento-card">
+            <div class="exp-header">
+              <h3>SDE Intern</h3>
+              <span class="company">Bridge Bound Academics</span>
+            </div>
+            <span class="date">Sep 2025 - Jan 2026</span>
+            <ul class="exp-list">
+              <li>Developed full-stack web platform using React.js, Node.js, Express.js, and PostgreSQL.</li>
+              <li>Implemented Agile practices, CI/CD with GitHub Actions, and scalable backend architecture.</li>
+              <li>Built RESTful APIs, JWT authentication, and optimized database performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Samsung PRISM -->
+        <div class="timeline-item">
+          <div class="timeline-content bento-card">
+            <div class="exp-header">
+              <h3>Research Intern</h3>
+              <span class="company">Samsung PRISM (VIT Vellore)</span>
+            </div>
+            <span class="date">Sep 2024 - May 2025</span>
+            <ul class="exp-list">
+              <li>Increased PromQL query generation accuracy to 83.33% by implementing modular RAG framework.</li>
+              <li>Reduced error rates for complex inputs using agentic RAG workflows and dynamic tool orchestration.
+              </li>
+              <li>Enhanced scalability by curating datasets from Prometheus docs and implementing data pipelines.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/zentry.jpg" alt="Zentry Clone">
+          </div>
+          <div class="project-info">
+            <h3>Zentry Clone</h3>
+            <p>Award-winning design implementation using GSAP & React.</p>
+            <div class="project-links">
+              <a href="https://github.com/codingislub/zentry_clone" target="_blank">Code</a>
+              <a href="https://zentr.netlify.app/" target="_blank">Live</a>
+            </div>
+          </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2025 Aryan Singh Bisht. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/blog.webp" alt="TechVerse">
+          </div>
+          <div class="project-info">
+            <h3>TechVerse Blog</h3>
+            <p>Full-stack blog with Next.js 15, Clerk Auth & AI features.</p>
+            <div class="project-links">
+              <a href="https://github.com/codingislub/blogapp" target="_blank">Code</a>
+              <a href="https://techverse-blog.vercel.app/" target="_blank">Live</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/ecom.webp" alt="E-Commerce">
+          </div>
+          <div class="project-info">
+            <h3>E-Commerce</h3>
+            <p>Scalable platform with Stripe, AWS S3 & MongoDB.</p>
+            <div class="project-links">
+              <a href="https://github.com/codingislub/Ecomaws" target="_blank">Code</a>
+              <a href="https://ecom-frontend.aryan.college" target="_blank">Live</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Fun Pump -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/pump.webp" alt="Fun Pump">
+          </div>
+          <div class="project-info">
+            <h3>Fun.Pump</h3>
+            <p>Decentralized token launchpad on Solana/ETH.</p>
+            <div class="project-links">
+              <a href="https://github.com/codingislub/fun.pump" target="_blank">Code</a>
+              <a href="https://fun-pump-phi.vercel.app/" target="_blank">Live</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 5: Solana Token Generator -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/token-generator.png" alt="Solana Token Generator">
+          </div>
+          <div class="project-info">
+            <h3>Solana Token Gen</h3>
+            <p>DApp to mint SPL tokens with real-time updates.</p>
+            <div class="project-links">
+              <a href="https://github.com/codingislub/solana-token-generator" target="_blank">Code</a>
+              <a href="https://solana-token-generator-rho.vercel.app/" target="_blank">Live</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Solana Token Launchpad -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/token-launchpad.png" alt="Solana Token Launchpad">
+          </div>
+          <div class="project-info">
+            <h3>Solana Launchpad</h3>
+            <p>Mint SPL tokens with wallet integration & feedback.</p>
+            <div class="project-links">
+              <a href="https://github.com/codingislub/solana-token-launchpad" target="_blank">Code</a>
+              <a href="https://solana-token-launchpad-5w43.vercel.app/" target="_blank">Live</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-card glass-card">
+        <h2>Get in <span class="gradient-text">Touch</span></h2>
+        <div class="contact-actions">
+          <a href="mailto:aryansingbisht19@gmail.com" class="btn primary">Email Me</a>
+          <a href="https://linkedin.com/" target="_blank" class="btn secondary">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 Aryan Singh Bisht.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
